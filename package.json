@@ -1,0 +1,36 @@
+{
+  "name": "jira-cli",
+  "version": "1.0.0",
+  "description": "A cli for jira interaction",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Efabien/jira-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "framework"
+  ],
+  "author": "Efabien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Efabien/jira-cli/issues"
+  },
+  "homepage": "https://github.com/Efabien/jira-cli#readme",
+  "dependencies": {
+    "cli-progress": "^3.8.2",
+    "colors": "^1.4.0",
+    "js-yaml": "^3.14.0",
+    "lodash": "^4.17.20",
+    "prompt": "^1.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "yargs": "^16.0.3"
+  },
+  "bin": {
+    "jira": "./app.js"
+  }
+}
