@@ -35,7 +35,7 @@ commands:
         - userName:
             description: What is your user name ?
 options:
-  - key:
-      alias: k
+  - id:
+      alias: id
       type: string
-      description: capture key of a ressource
+      description: capture id of a ressource

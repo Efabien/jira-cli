@@ -13,7 +13,6 @@ const operations = {
     });
   },
   view: async (arg) => {
-    console.log(arg)
     const spinner = spinnerFactory.create('Opening ...');
     spinner.start();
     const project = await jiraClient.getProject(arg.key);
