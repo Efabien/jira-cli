@@ -1,9 +1,9 @@
 # jira-ify
 
-# Description
+## Description
 A cli tool for jira interaction
 
-## Prerequist and configuration
+## Prerequiste and configuration
 You need to have node.js installed on your computer.
 Then clone this repo and create a .env file at the root of the project.
 There you will set the following lines:
