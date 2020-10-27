@@ -8,9 +8,9 @@ You need to have node.js installed on your computer.
 Then clone this repo and create a .env file at the root of the project.
 There you will set the following lines:
 
-`JIRA_EMAIL_ADDRESS=<your_email_address_used_in_jira>
-JIRA_TOKEN=<your_jira_token>
-JIRA_HOST=<your_jira_server_url>`
+`JIRA_EMAIL_ADDRESS=<your_email_address_used_in_jira>`<br>
+`JIRA_TOKEN=<your_jira_token>`<br>
+`JIRA_HOST=<your_jira_server_url>`
 
 Generating your jira token by following this [link](https://id.atlassian.com/manage-profile/security/api-tokens)
 
