@@ -17,7 +17,7 @@ const operations = {
     const data = await jiraClient.getIssues(project.id);
     spinner.succeed();
     data.issues.forEach(issue => {
-      logger.info(`* ${issue.key} | ${issue.fields.summary}`);
+      logger.info(`* key: ${issue.key} | ${issue.fields.summary}`);
     });
   }
 };

@@ -1,10 +1,53 @@
-# cli-ify
+# jira-ify
 
-# Description and general vision
-The aim of this project is ease the implementation of a node.js based cli.
+# Description
+A cli tool for jira interaction
 
-The core concept is based on the cli-ify.yml file where commands, options and modules are declared.
+## Prerequist and configuration
+You need to have node.js installed on your computer.
+Then clone this repo and create a .env file at the root of the project.
+There you will set the following lines:
 
-It leverages the decorator pattern to handle things such as progress bar and error handeling behind the scene.
+`JIRA_EMAIL_ADDRESS=<your_email_address_used_in_jira>
+JIRA_TOKEN=<your_jira_token>`
 
-It also have utilities functions so as to uniformise the look of the by product.
+Generating your jira token by following this [link](https://id.atlassian.com/manage-profile/security/api-tokens)
+
+## Instalation
+
+Install the project globally :
+
+```bash
+npm install -g
+```
+## Usage
+
+```bash
+jira --help
+```
+`jira [command]`                                                               
+                                                                                
+`Commands:                                                                       
+  jira issues [subCmd]   Commad relative to issues               
+  jira project [subCmd]  Commad relative to project`
+
+`Options:                                           
+      --help     Show help                                             [boolean]
+      --version  Show version number                                   [boolean]
+  -p, --project  project key on which the command applies               [string]
+  -i, --issue    issue key on which the command applies                 [string]`
+
+*View list of project*
+```bash
+jira project list
+```
+*View list of issues in one project*
+```bash
+jira issues list -p <project_key>
+```
+*Open one issue in the browser*
+```bash
+jira issues view -i <issues_key>
+```
+
+
