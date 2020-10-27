@@ -11,16 +11,11 @@ const operations = {
     projects.forEach(project => {
       logger.info(` * Name: ${project.name} | key: ${ project.key} | id: ${project.id}`);
     });
-  },
-  view: async (arg) => {
-    const spinner = spinnerFactory.create('Opening ...');
-    spinner.start();
-    const project = await jiraClient.getProject(arg.key);
-    spinner.succeed();
-    console.log(project)
   }
 }
 
 module.exports = (arg) => {
-  return operations[arg.subCmd](arg);
+  const func = operations[arg.subCmd];
+  if (!func) return logger.error(`Invalide sub-commande ${arg.subCmd}`);
+  return func(arg);
 };
