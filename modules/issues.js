@@ -12,12 +12,12 @@ const operations = {
   },
   open: (arg) => {
     exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
-        if (err) return logger.error('git error', err);
-        if (typeof stdout === 'string') {
-          const gitBranch = stdout.trim();
-          return open(`${HOST}/browse/${gitBranch}`);
-        }
-        return logger.error('Could not retrieve git branch name');
+      if (err) return logger.error('git error', err);
+      if (typeof stdout === 'string') {
+        const gitBranch = stdout.trim();
+        return open(`${HOST}/browse/${gitBranch}`);
+      }
+      return logger.error('Could not retrieve git branch name');
     });
   },
   list: async (arg) => {
