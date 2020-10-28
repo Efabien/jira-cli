@@ -35,7 +35,7 @@ jira project list
 ```bash
 jira issue list -p <project_key>
 ```
-**Open one issue in the browser**<br>
+**Open an issue in the browser**<br>
 When invoqued from a git repo, this command attempt to open the issue in the browser,
 assuming that the issue key matchs the git branch name.
 The `-i` option can be used to provide the issue key.
