@@ -44,7 +44,7 @@ jira project list
 ```
 **View list of issues in one project**
 ```bash
-jira issues list -p <project_key>
+jira issue list -p <project_key>
 ```
 **Open one issue in the browser**
 When invoqued from a git repo, this command attempt to open the issue in the browser,

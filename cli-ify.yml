@@ -14,7 +14,7 @@ settings:
     label: ' '
     delimiter: ' '
 commands:
-  - issues:
+  - issue:
       describe: Commad relative to issues
       module: issues.js
       argv: subCmd
