@@ -1,24 +1,20 @@
 const open = require('open');
-const { exec } = require('child_process');
 const jiraClient = require('../lib/jira-client');
 const spinnerFactory = require('../lib/spinner-factory');
+const git = require('../lib/git');
 const logger = require('../lib/logger');
 const { HOST } = require('../config/user-config');
 
 const operations = {
-  view: (arg) => {
-    if (!arg.issue) return logger.error('use the -i flag tp provide the issue key name');
-    return open(`${HOST}/browse/${arg.issue}`);
-  },
-  open: (arg) => {
-    exec('git rev-parse --abbrev-ref HEAD', (err, stdout, stderr) => {
-      if (err) return logger.error('git error', err);
-      if (typeof stdout === 'string') {
-        const gitBranch = stdout.trim();
-        return open(`${HOST}/browse/${gitBranch}`);
-      }
-      return logger.error('Could not retrieve git branch name');
-    });
+  view: async(arg) => {
+    try {
+      if (arg.issue) return open(`${HOST}/browse/${arg.issue}`);
+      const branchName = await git.getBranchName();
+      return open(`${HOST}/browse/${branchName}`);
+    } catch (e) {
+      logger.error('use the -i flag tp provide the issue key name')
+      return logger.error('Git error', e);
+    }
   },
   list: async (arg) => {
     if (!arg.project) return logger.error('use the -p flag to provide the project key name');

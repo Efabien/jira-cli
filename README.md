@@ -47,13 +47,11 @@ jira project list
 jira issues list -p <project_key>
 ```
 **Open one issue in the browser**
+When invoqued from a git repo, this command attempt to open the issue in the browser,
+assuming that the issue key matchs the git branch name.
+The `-i` flag can be used to provide the issue key.
 ```bash
-jira issues view -i <issues_key>
-```
-**Open one issue in the browser base on the branch name**
-This command should be invoqued from a git repo and the issue key should match the git branch name
-```bash
-jira issues open
+jira issues view
 ```
 
 
