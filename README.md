@@ -29,7 +29,7 @@ jira --help
 `jira [command]`                                                               
                                                                                 
 `Commands:                                                                       
-  jira issues [subCmd]   Commad relative to issues               
+  jira issue [subCmd]   Commad relative to issues               
   jira project [subCmd]  Commad relative to project`
 
 `Options:                                           
@@ -49,7 +49,7 @@ jira issue list -p <project_key>
 **Open one issue in the browser**
 When invoqued from a git repo, this command attempt to open the issue in the browser,
 assuming that the issue key matchs the git branch name.
-The `-i` flag can be used to provide the issue key.
+The `-i` option can be used to provide the issue key.
 ```bash
 jira issues view
 ```
