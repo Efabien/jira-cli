@@ -25,18 +25,7 @@ npm install -g
 
 ```bash
 jira --help
-```
-`jira [command]`                                                               
-                                                                                
-`Commands:                                                                       
-  jira issue [subCmd]   Commad relative to issues               
-  jira project [subCmd]  Commad relative to project`
-
-`Options:                                           
-      --help     Show help                                             [boolean]
-      --version  Show version number                                   [boolean]
-  -p, --project  project key on which the command applies               [string]
-  -i, --issue    issue key on which the command applies                 [string]`
+```                                                  
 
 **View list of project**
 ```bash
