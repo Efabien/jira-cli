@@ -16,12 +16,20 @@ settings:
 commands:
   - issue:
       describe: Commad relative to issues
-      module: issues.js
+      module: issue
       argv: subCmd
+      sub-commands:
+        - view:
+            describe: open issue in the browser. Use the -i option to provide the issue key (defaults to the git branch name)
+        - list:
+            describe: View list of issues in one project. Use the -p option to provide the project key
   - project:
       describe: Commad relative to project
-      module: project.js
+      module: project
       argv: subCmd
+      sub-commands:
+        - list:
+            describe: View project list
 options:
   - project:
       alias: p
@@ -31,3 +39,7 @@ options:
       alias: i
       type: string
       description: issue key on which the command applies
+  - usage:
+      alias: u
+      type: boolean
+      description: show command and sub-command description
