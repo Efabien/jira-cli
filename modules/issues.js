@@ -6,7 +6,7 @@ const logger = require('../lib/logger');
 const { HOST } = require('../config/user-config');
 
 const operations = {
-  view: async(arg) => {
+  view: async (arg) => {
     try {
       if (arg.issue) return open(`${HOST}/browse/${arg.issue}`);
       const branchName = await git.getBranchName();
@@ -29,7 +29,7 @@ const operations = {
   }
 };
 
-module.exports = async (arg) => {
+module.exports = (arg) => {
   const func = operations[arg.subCmd];
   if (!func) return logger.error(`Invalide sub-commande ${arg.subCmd}`);
   return func(arg);

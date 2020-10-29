@@ -42,5 +42,3 @@ The `-i` option can be used to provide the issue key.
 ```bash
 jira issues view
 ```
-
-
