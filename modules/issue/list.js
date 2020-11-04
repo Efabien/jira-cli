@@ -6,10 +6,9 @@ module.exports = async (arg) => {
   if (!arg.project) return logger.error('use the -p flag to provide the project key name');
   const spinner = spinnerFactory.create(`Loading issues on project ${arg.project} ...`);
   spinner.start();
-  const project = await jiraClient.getProjectFromKey(arg.project);
-  const data = await jiraClient.getIssues(project.id);
+  const data = await jiraClient.getIssues(arg.project);
   spinner.succeed();
-  data.issues.forEach(issue => {
+  data.issues.forEach((issue, index) => {
     logger.info(`* key: ${issue.key} | ${issue.fields.summary}`);
   });
 };
