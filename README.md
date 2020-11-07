@@ -46,5 +46,5 @@ When invoqued from a git repo, this command attempt to open the issue in the bro
 assuming that the issue key matchs the git branch name.
 The `-i` option can be used to provide the issue key.
 ```bash
-jira issues view
+jira issue view
 ```
