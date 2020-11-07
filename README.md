@@ -35,6 +35,12 @@ jira project list
 ```bash
 jira issue list -p <project_key>
 ```
+The -s can be used to filter issues by status.
+Ex :
+``` bash
+jira issue list -p <project_key> -s="In Progress"
+```
+
 **Open an issue in the browser**<br>
 When invoqued from a git repo, this command attempt to open the issue in the browser,
 assuming that the issue key matchs the git branch name.
