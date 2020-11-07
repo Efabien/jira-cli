@@ -43,3 +43,7 @@ options:
       alias: u
       type: boolean
       description: show command and sub-command description
+  - status:
+      alias: s
+      type: string
+      description: used to filter issues by status
