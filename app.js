@@ -12,9 +12,9 @@ const {
 } = require('./lib/init-yargs');
 
 const run = (commands, options, settings) => {
-  registerCommands(commands, yargs, settings);
-  registerOptions(options, yargs, settings);
-  yargs.argv;
+  const inited = registerCommands(commands, yargs, settings);
+  registerOptions(options, inited, settings);
+  inited.argv;
 };
 
 run(commands, options, settings);
