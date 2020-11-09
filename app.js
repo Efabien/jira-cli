@@ -1,20 +1,6 @@
 #!/usr/bin/env node
-const {
-  commands,
-  options,
-  settings
-} = require('./config');
-const yargs = require('yargs');
+const CliIfy = require('cli-ify');
 
-const {
-  registerCommands, 
-  registerOptions
-} = require('./lib/init-yargs');
+const cliIfy = new CliIfy();
 
-const run = (commands, options, settings) => {
-  const inited = registerCommands(commands, yargs, settings);
-  registerOptions(options, inited, settings);
-  inited.argv;
-};
-
-run(commands, options, settings);
+cliIfy.init('./cli-ify.yml');

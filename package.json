@@ -21,17 +21,13 @@
   },
   "homepage": "https://github.com/Efabien/jira-cli#readme",
   "dependencies": {
-    "cli-progress": "^3.8.2",
-    "colors": "^1.4.0",
+    "cli-ify": "git+https://github.com/Efabien/cli-ify.git",
     "dotenv": "^8.2.0",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.20",
     "open": "^7.3.0",
-    "ora": "^5.1.0",
-    "prompt": "^1.0.0",
     "request": "^2.88.2",
-    "request-promise": "^4.2.6",
-    "yargs": "^16.0.3"
+    "request-promise": "^4.2.6"
   },
   "bin": {
     "jira": "./app.js"
