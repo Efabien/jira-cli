@@ -42,10 +42,6 @@ options:
       alias: i
       type: string
       description: issue key on which the command applies
-  - usage:
-      alias: u
-      type: boolean
-      description: show command and sub-command description
   - status:
       alias: s
       type: string
