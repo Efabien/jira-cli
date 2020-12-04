@@ -8,7 +8,7 @@ module.exports = async(arg, utils) => {
     const branchName = await git.getBranchName();
     return open(`${HOST}/browse/${branchName}`);
   } catch (e) {
-    utils.logger.error('use the -i flag tp provide the issue key name')
+    utils.logger.error('use the -i flag tp provide the issue key name');
     return utils.logger.error('Git error', e);
   }
 };
